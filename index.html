@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panel</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <header class=" bg-[gray] top-0 lef-0 w-full py-[10px] z-10 fixed">
+        <div class="container mx-auto  px-[30px]  flex justify-between">
+            <input class="max-w-[400px] cursor-pointer w-full p-[10px] border border-[orangered] rounded-[10px] outline-none" type="search" placeholder="Studentlarni qidirish">
+           
+            <div class="max-w-[400px]">
+            <select class=" cursor-pointer max-w-[76px] w-full  border-[orangered] rounded-[10px] ">
+                <option value="N2">N2</option>
+                <option value="N3">N3</option>
+                <option value="N4">N4</option>
+                <option value="N5">N5</option>
+            </select>
+           </div>
+            <button 
+            id="add-student-btn"
+            class="bg-white border border-[orangered] rounded-[10px] max-w-[150px] px-[5px]  cursor-pointer font-bold text-[10px]">
+                Student qoshishg 
+            </button>
+        </div>
+    </header>
+    <main class="mt-[50px]">
+        <section>
+            <div class="container mx-auto p-[30px]">
+                <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                            <tr>
+                                <th scope="col" class="px-6 py-3">
+                                    Ismi
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Famlyasi
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Guruhi
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Ishlaydimi?
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Boshqaru
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                            
+                           
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+        </section>
+
+        <div
+        id="outer-modal" 
+        class="fixed hidden top-0 bg-[black]/40 w-full h-full flex items-center justify-center ">
+            <div 
+            id="inner-modal"
+            class="max-w-[400px] h-auto w-full bg-white  p-[40px] items-center rounded-[20px] flex flex-col gap-[20px]">
+                <h1 class="font-bold text-[blue]">Student Qoshish !!</h1>
+                <form id="form" class="flex flex-col gap-[20px] w-full items-center">
+                    <input required class=" w-full   cursor-pointer rounded-[10px] " type="text" placeholder="Isim Kiriting">
+                    <input required class=" w-full  my-[10px] cursor-pointer rounded-[10px] " type="text" placeholder="Familya Kiriting">
+                    <select class=" w-full  cursor-pointer rounded-[10px] ">
+                        <option value="N2">N2</option>
+                        <option value="N3">N3</option>
+                        <option value="N4">N4</option>
+                        <option value="N5">N5</option>
+                    </select>
+                    <div class="">
+                        <input  class=" cursor-pointer" type="checkbox"  id="work">
+                        <label class="cursor-pointer" for="work">Ishlaydimi?</label>
+                    </div>
+                    <button
+                    type="submit"
+                        class="bg-white border border-blue-500 rounded-[10px]  p-[15px] w-full cursor-pointer font-bold text-[12px]">
+                        Student qoshishg
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
