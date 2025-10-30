@@ -25,7 +25,7 @@
             <button 
             id="add-student-btn"
             class="bg-white border border-[orangered] rounded-[10px] max-w-[150px] px-[5px]  cursor-pointer font-bold text-[10px]">
-                Student qoshishg 
+                Student <span id="change-btn">qoshishg</span>
             </button>
         </div>
     </header>
@@ -72,16 +72,25 @@
             class="max-w-[400px] h-auto w-full bg-white  p-[40px] items-center rounded-[20px] flex flex-col gap-[20px]">
                 <h1 class="font-bold text-[blue]">Student Qoshish !!</h1>
                 <form id="form" class="flex flex-col gap-[20px] w-full items-center">
-                    <input required class=" w-full   cursor-pointer rounded-[10px] " type="text" placeholder="Isim Kiriting">
-                    <input required class=" w-full  my-[10px] cursor-pointer rounded-[10px] " type="text" placeholder="Familya Kiriting">
-                    <select class=" w-full  cursor-pointer rounded-[10px] ">
+                   
+                    <input
+                    id="ism"
+                     required class=" w-full   cursor-pointer rounded-[10px] " type="text" placeholder="Isim Kiriting">
+                    <input
+                    id="familya"
+                    required class=" w-full  my-[10px] cursor-pointer rounded-[10px] " type="text" placeholder="Familya Kiriting">
+                    <select
+                    id="group"
+                    class=" w-full  cursor-pointer rounded-[10px] ">
                         <option value="N2">N2</option>
                         <option value="N3">N3</option>
                         <option value="N4">N4</option>
                         <option value="N5">N5</option>
                     </select>
                     <div class="">
-                        <input  class=" cursor-pointer" type="checkbox"  id="work">
+                        <input 
+                        
+                        class=" cursor-pointer" type="checkbox"  id="work">
                         <label class="cursor-pointer" for="work">Ishlaydimi?</label>
                     </div>
                     <button
