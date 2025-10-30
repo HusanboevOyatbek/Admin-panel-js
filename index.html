@@ -15,7 +15,10 @@
             <input class="max-w-[400px] cursor-pointer w-full p-[10px] border border-[orangered] rounded-[10px] outline-none" type="search" placeholder="Studentlarni qidirish">
            
             <div class="max-w-[400px]">
-            <select class=" cursor-pointer max-w-[76px] w-full  border-[orangered] rounded-[10px] ">
+            <select
+            id="selected-filter"
+            class=" cursor-pointer max-w-[76px] w-full  border-[orangered] rounded-[10px] ">
+                <option value="All">All</option>
                 <option value="N2">N2</option>
                 <option value="N3">N3</option>
                 <option value="N4">N4</option>
@@ -36,6 +39,9 @@
                     <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                             <tr>
+                                <th scope="col" class="px-6 py-3">
+                                    No
+                                </th>
                                 <th scope="col" class="px-6 py-3">
                                     Ismi
                                 </th>
